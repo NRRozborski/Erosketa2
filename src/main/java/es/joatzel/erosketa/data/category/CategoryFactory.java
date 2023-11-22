@@ -15,11 +15,11 @@ public class CategoryFactory {
 
         Map<Long, Category> map = new HashMap<>();
         map.put(1L,
-                new Category(1L, UUID.randomUUID(), "Plants", "Vegetables, fruits, nuts, etc.", LocalDateTime.now(), LocalDateTime.now()));
+                new Category(1L, UUID.randomUUID(), "Plants", "Vegetables, fruits, nuts, etc.", "#000000", LocalDateTime.now(), LocalDateTime.now()));
         map.put(2L,
-                new Category(2L, UUID.randomUUID(), "Meats", "Chicken, pork, lamb, etc.", LocalDateTime.now(), LocalDateTime.now()));
+                new Category(2L, UUID.randomUUID(), "Meats", "Chicken, pork, lamb, etc.", "#000000", LocalDateTime.now(), LocalDateTime.now()));
         map.put(3L,
-                new Category(3L, UUID.randomUUID(), "Drinks", "Beer, juice, milk, etc.", LocalDateTime.now(), LocalDateTime.now()));
+                new Category(3L, UUID.randomUUID(), "Drinks", "Beer, juice, milk, etc.", "#000000", LocalDateTime.now(), LocalDateTime.now()));
 
         log.info("Category demo data loaded!");
 

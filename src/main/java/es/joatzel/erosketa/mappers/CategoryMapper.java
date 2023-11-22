@@ -24,23 +24,21 @@ public class CategoryMapper {
     }
 
 
-    public List<RaquetaResponseDto> toResponse(List<Raqueta> raquetas) {
+    public List<CategoryResponseDto> toResponse(List<Category> raquetas) {
         return raquetas.stream()
                 .map(this::toResponse)
                 .toList();
     }
 
-    public Raqueta toModel(RaquetaRequestDto dto) {
-        return new Raqueta(
+    public Category toModel(CategoryResponseDto dto) {
+        return new Category(
                 0L,
                 UUID.randomUUID(),
-                dto.getMarca(),
-                dto.getModelo(),
-                dto.getPrecio(),
-                dto.getImagen(),
+                dto.denomination(),
+                dto.description(),
+                dto.color(),
                 LocalDateTime.now(),
-                LocalDateTime.now(),
-                false
+                LocalDateTime.now()
         );
     }
 }
