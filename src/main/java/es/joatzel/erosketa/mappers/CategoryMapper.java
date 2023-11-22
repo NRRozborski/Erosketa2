@@ -1,6 +1,7 @@
 package es.joatzel.erosketa.mappers;
 
 import es.joatzel.erosketa.dto.CategoryResponseDto;
+import es.joatzel.erosketa.dto.CategoryRequestDto;
 import es.joatzel.erosketa.models.Category;
 import org.springframework.stereotype.Component;
 
@@ -30,7 +31,7 @@ public class CategoryMapper {
                 .toList();
     }
 
-    public Category toModel(CategoryResponseDto dto) {
+    public Category toModel(CategoryRequestDto dto) {
         return new Category(
                 0L,
                 UUID.randomUUID(),
