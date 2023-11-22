@@ -1,19 +1,21 @@
-package es.joatzel.erosketa.Models;
+package es.joatzel.erosketa.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.HexFormat;
+import java.util.UUID;
 
 
 @Data
-@Entity
+@AllArgsConstructor
 public class Category {
-    private @Id @GeneratedValue Long id;
+    private final Long id;
+    private final UUID UUID;
     private String denomination;
     private String description;
+    private String color;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }
