@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+
+//TODO ver como hacerlo con JPA
 @Repository
 public interface CategoryRepository{// extends JpaRepository<Category, Long> {
 
