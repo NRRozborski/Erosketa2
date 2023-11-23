@@ -16,7 +16,7 @@ public class CategoryMapper {
         return new CategoryResponseDto (
                 category.getId(),
                 category.getUUID(),
-                category.getDenomination(),
+                category.getName(),
                 category.getDescription(),
                 category.getColor(),
                 category.getCreatedAt(),
@@ -35,7 +35,7 @@ public class CategoryMapper {
         return new Category(
                 0L,
                 UUID.randomUUID(),
-                dto.denomination(),
+                dto.name(),
                 dto.description(),
                 dto.color(),
                 LocalDateTime.now(),

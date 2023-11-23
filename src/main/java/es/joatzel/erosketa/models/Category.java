@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-import java.util.HexFormat;
 import java.util.UUID;
 
 
@@ -13,7 +12,7 @@ import java.util.UUID;
 public class Category {
     private final Long id;
     private final UUID UUID;
-    private String denomination;
+    private String name;
     private String description;
     private String color;
     private LocalDateTime createdAt;

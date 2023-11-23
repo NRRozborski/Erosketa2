@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 public record CategoryResponseDto(Long id,
                                   java.util.UUID UUID,
-                                  String denomination,
+                                  String name,
                                   String description,
                                   String color,
                                   LocalDateTime createdAt,

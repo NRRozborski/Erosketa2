@@ -28,7 +28,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     public List<Category> findAllByName(String keywordName) {
         return categories.values()
                 .stream()
-                .filter(category -> category.getDenomination()
+                .filter(category -> category.getName()
                         .toLowerCase()
                         .contains(keywordName.toLowerCase()))
                 .toList();
@@ -61,7 +61,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
         Category newCategory = new Category(
                 lastId,
                 UUID.randomUUID(),
-                category.getDenomination(),
+                category.getName(),
                 category.getDescription(),
                 category.getColor(),
                 now,
@@ -73,11 +73,12 @@ public class CategoryRepositoryImpl implements CategoryRepository {
         return newCategory;
     }
 
+
     public Category update(Category category) {
         LocalDateTime now = LocalDateTime.now();
 
         Category categoryToUpdate = categories.get(category.getId());
-        categoryToUpdate.setDenomination(category.getDenomination());
+        categoryToUpdate.setName(category.getName());
         categoryToUpdate.setDescription(category.getDescription());
         categoryToUpdate.setColor(category.getColor());
         categoryToUpdate.setUpdatedAt(now);

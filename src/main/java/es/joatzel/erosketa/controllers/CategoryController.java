@@ -97,7 +97,7 @@ public class CategoryController {
             return ResponseEntity.notFound().build();
         }
 
-        categoryDB.get().setDenomination(categoryRequestDto.denomination());
+        categoryDB.get().setName(categoryRequestDto.name());
         categoryDB.get().setDescription(categoryRequestDto.description());
         categoryDB.get().setColor(categoryRequestDto.color());
 
