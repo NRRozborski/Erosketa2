@@ -1,4 +1,4 @@
-package es.joatzel.erosketa.dto;
+package es.joatzel.erosketa.dto.category;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

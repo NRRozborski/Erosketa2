@@ -11,7 +11,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Category {
     private final Long id;
-    private final UUID UUID;
+    private final UUID uuid;
     private String name;
     private String description;
     private String color;

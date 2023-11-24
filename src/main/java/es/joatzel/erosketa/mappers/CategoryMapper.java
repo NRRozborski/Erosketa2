@@ -1,7 +1,7 @@
 package es.joatzel.erosketa.mappers;
 
-import es.joatzel.erosketa.dto.CategoryResponseDto;
-import es.joatzel.erosketa.dto.CategoryRequestDto;
+import es.joatzel.erosketa.dto.category.CategoryResponseDto;
+import es.joatzel.erosketa.dto.category.CategoryRequestDto;
 import es.joatzel.erosketa.models.Category;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +15,7 @@ public class CategoryMapper {
     public CategoryResponseDto toResponse(Category category) {
         return new CategoryResponseDto (
                 category.getId(),
-                category.getUUID(),
+                category.getUuid(),
                 category.getName(),
                 category.getDescription(),
                 category.getColor(),

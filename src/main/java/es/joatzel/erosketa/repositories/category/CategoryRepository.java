@@ -26,7 +26,7 @@ public interface CategoryRepository{// extends JpaRepository<Category, Long> {
     Optional<Category> findByUuid(UUID uuid);
 
 
-    Category save(Category raqueta);
+    Category save(Category category);
 
     void deleteById(Long id);
 

@@ -1,7 +1,7 @@
 package es.joatzel.erosketa.controllers;
 
-import es.joatzel.erosketa.dto.CategoryResponseDto;
-import es.joatzel.erosketa.dto.CategoryRequestDto;
+import es.joatzel.erosketa.dto.category.CategoryResponseDto;
+import es.joatzel.erosketa.dto.category.CategoryRequestDto;
 import es.joatzel.erosketa.mappers.CategoryMapper;
 import es.joatzel.erosketa.services.category.CategoryService;
 import jakarta.annotation.Nullable;

@@ -12,10 +12,10 @@ public class Product {
     private final Long id;
     private final UUID uuid;
     private String name;
-    private Long categoryId;
-    private String provider;
-    private Boolean wanted;
-    private Boolean finished;
+    private String description;
+    private Long price;//In cents
+    private Integer stock;
+    private Category category;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

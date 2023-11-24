@@ -1,6 +1,6 @@
 package es.joatzel.erosketa.repositories.category;
 
-import es.joatzel.erosketa.data.category.CategoryFactory;
+import es.joatzel.erosketa.data.Factory;
 import es.joatzel.erosketa.models.Category;
 import org.springframework.stereotype.Repository;
 
@@ -12,7 +12,7 @@ import java.util.UUID;
 
 @Repository
 public class CategoryRepositoryImpl implements CategoryRepository {
-    private final Map<Long, Category> categories = CategoryFactory.getCategoryDemoData();
+    private final Map<Long, Category> categories = Factory.getCategoryDemoData();
 
     @Override
     public List<Category> findAll() {
@@ -38,7 +38,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     public Optional<Category> findByUuid(UUID uuid) {
         return categories.values()
                 .stream()
-                .filter(category -> category.getUUID()
+                .filter(category -> category.getUuid()
                         .equals(uuid))
                 .findFirst();
     }
