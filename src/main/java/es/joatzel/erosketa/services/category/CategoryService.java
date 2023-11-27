@@ -15,7 +15,7 @@ public interface CategoryService {
 
     Optional<Category> findByUuid(UUID uuid);
 
-    Category save(Category raqueta);
+    Category save(Category category);
 
     void deleteById(Long id);
 }
