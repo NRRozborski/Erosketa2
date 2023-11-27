@@ -16,48 +16,48 @@ import java.util.UUID;
 @CacheConfig(cacheNames = {"Product"})
 public class ProductServiceImpl implements ProductService{
 
-    private final ProductRepository ProductRepository;
+    private final ProductRepository productRepository;
 
     @Autowired
-    public ProductServiceImpl(ProductRepository ProductRepository){
-        this.ProductRepository = ProductRepository;
+    public ProductServiceImpl(ProductRepository productRepository){
+        this.productRepository = productRepository;
     }
 
     @Override
     public List<Product> findAll() {
         log.info("Find all");
 
-        return ProductRepository.findAll();
+        return productRepository.findAll();
     }
 
     @Override
     public Optional<Product> findById(Long id) {
         log.info("Find by id");
 
-        return ProductRepository.findById(id);
+        return productRepository.findById(id);
     }
 
     @Override
     public List<Product> findAllByName(String keywordName) {
         log.info("Find all by name or part of it");
 
-        return ProductRepository.findAllByName(keywordName);
+        return productRepository.findAllByName(keywordName);
     }
 
     @Override
     public Optional<Product> findByUuid(UUID uuid) {
         log.info("Find by UUID");
 
-        return ProductRepository.findByUuid(uuid);
+        return productRepository.findByUuid(uuid);
     }
 
     @Override
     public Product save(Product raqueta) {
-        return ProductRepository.save(raqueta);
+        return productRepository.save(raqueta);
     }
 
     @Override
     public void deleteById(Long id) {
-        ProductRepository.deleteById(id);
+        productRepository.deleteById(id);
     }
 }
