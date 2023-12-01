@@ -1,6 +1,7 @@
 package es.joatzel.erosketa.dto.product;
 
 import es.joatzel.erosketa.models.Category;
+import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 
@@ -13,6 +14,7 @@ public record ProductRequestDto(
         Long price,
         @Min(value = 0, message = "The stock cannot be negative.")
         Integer stock,
+        @Nullable
         Category category) {
     public ProductRequestDto{}
 }

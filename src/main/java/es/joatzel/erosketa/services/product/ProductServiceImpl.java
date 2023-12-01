@@ -41,7 +41,7 @@ public class ProductServiceImpl implements ProductService{
     public List<Product> findAllByName(String keywordName) {
         log.info("Find all by name or part of it");
 
-        return productRepository.findAllByName(keywordName);
+        return productRepository.findAllByNameContainsIgnoreCase(keywordName);
     }
 
     @Override

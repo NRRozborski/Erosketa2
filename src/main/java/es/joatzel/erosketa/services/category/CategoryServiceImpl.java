@@ -41,7 +41,7 @@ public class CategoryServiceImpl implements CategoryService{
     public List<Category> findAllByName(String keywordName) {
         log.info("Find all by name or part of it");
 
-        return categoryRepository.findAllByName(keywordName);
+        return categoryRepository.findAllByNameContainsIgnoreCase(keywordName);
     }
 
     @Override

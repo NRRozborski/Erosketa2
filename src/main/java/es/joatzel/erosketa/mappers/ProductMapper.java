@@ -3,6 +3,8 @@ package es.joatzel.erosketa.mappers;
 import es.joatzel.erosketa.dto.product.ProductRequestDto;
 import es.joatzel.erosketa.dto.product.ProductResponseDto;
 import es.joatzel.erosketa.models.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -12,6 +14,10 @@ import java.util.UUID;
 @Component
 public class ProductMapper {
 
+    @Lazy
+    @Autowired
+    private CategoryMapper categoryMapper;
+
     public ProductResponseDto toResponse(Product product) {
         return new ProductResponseDto(
                 product.getId(),
@@ -20,7 +26,7 @@ public class ProductMapper {
                 product.getDescription(),
                 product.getPrice(),
                 product.getStock(),
-                product.getCategory(),
+                product.getCategory() == null ? null : categoryMapper.toResponse(product.getCategory()),
                 product.getCreatedAt(),
                 product.getUpdatedAt()
         );

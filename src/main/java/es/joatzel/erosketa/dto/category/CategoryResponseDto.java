@@ -1,5 +1,6 @@
 package es.joatzel.erosketa.dto.category;
 
+import es.joatzel.erosketa.dto.product.ProductResponseDto;
 import es.joatzel.erosketa.models.Product;
 import jakarta.persistence.Id;
 import lombok.Data;
@@ -15,7 +16,7 @@ public record CategoryResponseDto(
         String name,
         String description,
         String color,
-        List<Product> products,
+        List<ProductResponseDto> products,
         LocalDateTime createdAt,
         LocalDateTime updatedAt) {
 

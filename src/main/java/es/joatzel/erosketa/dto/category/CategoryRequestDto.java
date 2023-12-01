@@ -1,10 +1,13 @@
 package es.joatzel.erosketa.dto.category;
 
+import es.joatzel.erosketa.models.Product;
 import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 
 public record CategoryRequestDto(
@@ -12,7 +15,9 @@ public record CategoryRequestDto(
         String name,
         String description,
         @Nullable
-        String color) {
+        String color,
+        @Nullable
+        List<Product> products) {
 
     public CategoryRequestDto {}
 }

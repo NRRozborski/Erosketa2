@@ -12,7 +12,7 @@ import java.util.UUID;
 
 //TODO ver como hacerlo con JPA
 @Repository
-public interface CategoryRepository{// extends JpaRepository<Category, Long> {
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     List<Category> findAll();
 
@@ -20,7 +20,7 @@ public interface CategoryRepository{// extends JpaRepository<Category, Long> {
     Optional<Category> findById(Long id);
 
 
-    List<Category> findAllByName(String keywordName);
+    List<Category> findAllByNameContainsIgnoreCase(String keywordName);
 
 
     Optional<Category> findByUuid(UUID uuid);
